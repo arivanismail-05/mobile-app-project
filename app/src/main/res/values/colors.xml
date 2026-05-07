@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_blue">#0880ea</color>
+    <color name="bg_dark">#0F172A</color>
+    <color name="card_dark">#1E293B</color>
+    <color name="accent_blue">#3B82F6</color>
+    <color name="text_gray">#94A3B8</color>
 </resources>

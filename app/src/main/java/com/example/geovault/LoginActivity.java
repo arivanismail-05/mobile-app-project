@@ -1,8 +1,6 @@
 package com.example.geovault;
 
 import android.os.Bundle;
-
-
 import com.example.geovault.Base.BaseActivity;
 
 public class LoginActivity extends BaseActivity {

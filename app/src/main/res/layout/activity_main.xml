@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:background="@color/bg_dark">
     <com.google.android.material.appbar.MaterialToolbar
-        app:navigationIcon="@drawable/ic_launcher_foreground"
+        app:navigationIcon="@drawable/marker_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Information System Eng"
+        app:title="@string/app_name"
         android:fitsSystemWindows="true"
         app:titleTextColor="#fff"
         app:titleCentered="false"
-        android:background="@color/black">
+        android:background="@color/main_blue">
     </com.google.android.material.appbar.MaterialToolbar>
+
 </LinearLayout>

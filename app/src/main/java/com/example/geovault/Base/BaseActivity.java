@@ -6,9 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.example.geovault.LoginActivity;
 import com.example.geovault.R;
-import com.example.geovault.SplashActivity;
 
 public class BaseActivity extends AppCompatActivity {
 

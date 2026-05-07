@@ -6,20 +6,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:fitsSystemWindows="true"
-    android:background="@color/main_blue"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@color/bg_dark">
 
-
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:alpha="0.8"
-        android:text="login"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
+        app:title="Login"
+        app:titleTextColor="@color/white"
+        app:titleCentered="true"
+        android:background="@color/main_blue"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/user_trust"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back!"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login to your account"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColorHint="@color/text_gray"
+            app:hintTextColor="@color/accent_blue"
+            app:boxBackgroundColor="@color/card_dark"
+            app:boxStrokeColor="@color/accent_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Password"
+            android:textColorHint="@color/text_gray"
+            app:hintTextColor="@color/accent_blue"
+            app:boxBackgroundColor="@color/card_dark"
+            app:boxStrokeColor="@color/accent_blue"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/main_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:text="Login"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            app:cornerRadius="8dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/accent_blue"/>
+
+    </LinearLayout>
 
 </LinearLayout>
