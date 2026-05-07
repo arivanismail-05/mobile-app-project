@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:fitsSystemWindows="true"
+    android:background="@color/main_blue"
+    tools:context=".SplashActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_marginTop="-40dp"
+        android:layout_width="match_parent"
+        android:layout_height="243dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/searching_location" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GeoVault"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:layout_marginTop="-10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Your Favorite Destinations"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="40dp"
+        android:alpha="0.8"/>
+    <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnGetStarted"
+    android:layout_width="220dp"
+    android:layout_height="60dp"
+    android:text="Get Started"
+    android:textSize="18sp"
+    android:textColor="@color/main_blue"
+    android:backgroundTint="@color/white"
+    app:cornerRadius="30dp" />
+
+</LinearLayout>
