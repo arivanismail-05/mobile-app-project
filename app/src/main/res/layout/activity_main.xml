@@ -123,52 +123,114 @@
                 app:chipStrokeWidth="1dp"/>
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipMainPark"
+                android:id="@+id/chipHome"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🌲 Parks"
+                android:text="🏠 Home"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:rippleColor="@color/accent_blue"
-                app:chipStrokeColor="@color/card_dark"
-                app:chipStrokeWidth="1dp"/>
+                app:chipStrokeColor="@color/card_dark"/>
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipMainCity"
+                android:id="@+id/chipWork"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🏙️ Cities"
+                android:text="💼 Work"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:rippleColor="@color/accent_blue"
-                app:chipStrokeColor="@color/card_dark"
-                app:chipStrokeWidth="1dp"/>
+                app:chipStrokeColor="@color/card_dark"/>
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipMainHistorical"
+                android:id="@+id/chipRestaurant"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🏛️ Historical"
+                android:text="🍴 Restaurant"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:rippleColor="@color/accent_blue"
-                app:chipStrokeColor="@color/card_dark"
-                app:chipStrokeWidth="1dp"/>
+                app:chipStrokeColor="@color/card_dark"/>
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipMainRestaurant"
+                android:id="@+id/chipShopping"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🍔 Food"
+                android:text="🛍️ Shopping"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:rippleColor="@color/accent_blue"
-                app:chipStrokeColor="@color/card_dark"
-                app:chipStrokeWidth="1dp"/>
+                app:chipStrokeColor="@color/card_dark"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTravel"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✈️ Travel"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:chipStrokeColor="@color/card_dark"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGas"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⛽ Gas"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:chipStrokeColor="@color/card_dark"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHospital"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏥 Hospital"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:chipStrokeColor="@color/card_dark"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSchool"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎓 School"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:chipStrokeColor="@color/card_dark"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEntertainment"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎬 Fun"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:chipStrokeColor="@color/card_dark"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipParking"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🅿️ Parking"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:chipStrokeColor="@color/card_dark"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOther"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 Other"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:chipStrokeColor="@color/card_dark"/>
 
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>

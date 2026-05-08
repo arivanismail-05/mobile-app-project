@@ -78,7 +78,8 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none">
+                android:scrollbars="none"
+                android:paddingBottom="8dp">
 
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/categoryChipGroup"
@@ -86,67 +87,22 @@
                     android:layout_height="wrap_content"
                     app:singleSelection="true"
                     app:selectionRequired="true"
-                    android:paddingBottom="8dp"
                     app:singleLine="true">
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipPark"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🌲 Park"
-                        android:textColor="@color/white"
-                        app:chipBackgroundColor="@color/card_dark"
-                        app:rippleColor="@color/accent_blue"
-                        app:chipStrokeColor="@color/accent_blue"/>
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipRestaurant"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🍔 Restaurant"
-                        android:textColor="@color/white"
-                        app:chipBackgroundColor="@color/card_dark"
-                        app:rippleColor="@color/accent_blue"
-                        app:chipStrokeColor="@color/accent_blue"/>
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipHistorical"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🏛️ Historical"
-                        android:textColor="@color/white"
-                        app:chipBackgroundColor="@color/card_dark"
-                        app:rippleColor="@color/accent_blue"
-                        app:chipStrokeColor="@color/accent_blue"/>
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipCity"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🏙️ City"
-                        android:textColor="@color/white"
-                        app:chipBackgroundColor="@color/card_dark"
-                        app:rippleColor="@color/accent_blue"
-                        app:chipStrokeColor="@color/accent_blue"/>
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipCafe"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="☕ Cafe"
-                        android:textColor="@color/white"
-                        app:chipBackgroundColor="@color/card_dark"
-                        app:rippleColor="@color/accent_blue"
-                        app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_home" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏠 Home" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_work" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💼 Work" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_restaurant" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🍴 Restaurant" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_shopping" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛍️ Shopping" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_travel" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✈️ Travel" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_gas" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⛽ Gas Station" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_hospital" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏥 Hospital" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_school" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎓 School" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_entertainment" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎬 Entertainment" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_parking" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🅿️ Parking" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/add_other" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📍 Other" android:textColor="@color/white" app:chipBackgroundColor="@color/card_dark" app:chipStrokeColor="@color/accent_blue"/>
 
                 </com.google.android.material.chip.ChipGroup>
-            </HorizontalScrollView>
-            <com.google.android.material.textfield.TextInputLayout
+            </HorizontalScrollView>            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
