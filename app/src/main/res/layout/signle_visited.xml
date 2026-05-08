@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity"
+    tools:context=".VisitedActivity"
     android:background="@color/bg_dark"
     >
 
@@ -82,8 +82,8 @@
             android:layout_height="18dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/angle_circle_right_24"
-            app:tint="@color/white" />
+            android:src="@drawable/star_24"
+            app:tint="@color/star_yellow" />
 
     </RelativeLayout>
 
