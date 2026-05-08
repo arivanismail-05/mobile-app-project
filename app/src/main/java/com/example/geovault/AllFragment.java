@@ -47,4 +47,11 @@ public class AllFragment extends Fragment {
             lvAllPlaces.setAdapter(adapter);
         }
     }
+
+    public void updateAdapter(java.util.ArrayList<com.example.geovault.Base.PlaceModel> newList) {
+        if (lvAllPlaces != null) {
+            CustomAdapter adapter = new CustomAdapter(newList, getActivity());
+            lvAllPlaces.setAdapter(adapter);
+        }
+    }
 }

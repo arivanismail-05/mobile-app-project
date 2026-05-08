@@ -50,4 +50,11 @@ public class WorkFragment extends Fragment {
         CustomAdapter adapter = new CustomAdapter(workList, (Activity) getActivity());
         lvWorkPlaces.setAdapter(adapter);
     }
+
+    public void updateAdapter(java.util.ArrayList<com.example.geovault.Base.PlaceModel> newList) {
+        if (lvWorkPlaces != null) {
+            CustomAdapter adapter = new CustomAdapter(newList, getActivity());
+            lvWorkPlaces.setAdapter(adapter);
+        }
+    }
 }
