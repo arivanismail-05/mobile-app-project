@@ -36,7 +36,6 @@ public class VisitedActivity extends BaseActivity {
 
         updateVisitedList();
 
-        // ئەگەر ویستت لە لاپەڕەی Visited-یشەوە بچیتە ناو Detail
         mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -53,13 +52,12 @@ public class VisitedActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        updateVisitedList(); // بۆ ئەوەی ئەگەر لە Detail گۆڕانکاریت کرد، لێرە یەکسەر نوێ بێتەوە
+        updateVisitedList();
     }
 
     private void updateVisitedList() {
         visitedList = new ArrayList<>();
 
-        // مەرجەکە لێرەیە: تەنها ئەو شوێنانەی Visited کراون
         for (PlaceModel p : placesList) {
             if (p.isVisited()) {
                 visitedList.add(p);
