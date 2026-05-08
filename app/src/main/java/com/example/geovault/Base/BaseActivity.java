@@ -8,7 +8,10 @@ import androidx.core.content.ContextCompat;
 
 import com.example.geovault.R;
 
+import java.util.ArrayList;
+
 public class BaseActivity extends AppCompatActivity {
+    public static ArrayList<PlaceModel> placesList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -172,15 +172,6 @@
                 app:chipBackgroundColor="@color/card_dark"
                 app:chipStrokeColor="@color/card_dark"/>
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipGas"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="⛽ Gas"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipHospital"
@@ -192,15 +183,7 @@
                 app:chipBackgroundColor="@color/card_dark"
                 app:chipStrokeColor="@color/card_dark"/>
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipSchool"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🎓 School"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
+
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipEntertainment"
@@ -212,15 +195,7 @@
                 app:chipBackgroundColor="@color/card_dark"
                 app:chipStrokeColor="@color/card_dark"/>
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipParking"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🅿️ Parking"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
+
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipOther"
