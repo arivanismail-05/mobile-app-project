@@ -10,10 +10,11 @@
     tools:context=".AddActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
+        app:navigationIconTint="@color/white"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Add New Memory"
+        app:title="Add New Place"
         app:titleTextColor="@color/white"
         app:titleCentered="true"
         android:background="@color/main_blue"/>
@@ -170,7 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="32dp"
-                android:text="Save to Memories"
+                android:text="Save"
                 android:textSize="18sp"
                 android:textAllCaps="false"
                 app:cornerRadius="12dp"

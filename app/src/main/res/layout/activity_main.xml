@@ -95,51 +95,83 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:paddingStart="12dp"
-        android:paddingEnd="12dp">
-        <LinearLayout
+        android:paddingEnd="12dp"
+        android:clipToPadding="false">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/mainCategoryChipGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="All"
-                android:layout_marginEnd="8dp"
-                app:cornerRadius="20dp"
-                android:textColor="@color/white"
-                app:strokeColor="@color/accent_blue"/>
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Parks"
-                android:layout_marginEnd="8dp"
-                app:cornerRadius="20dp"
-                android:textColor="@color/text_gray"
-                app:strokeColor="@color/card_dark"/>
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cities"
-                android:layout_marginEnd="8dp"
-                app:cornerRadius="20dp"
-                android:textColor="@color/text_gray"
-                app:strokeColor="@color/card_dark"/>
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Historical"
-                android:layout_marginEnd="8dp"
-                app:cornerRadius="20dp"
-                android:textColor="@color/text_gray"
-                app:strokeColor="@color/card_dark"/>
-        </LinearLayout>
-    </HorizontalScrollView>
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedChip="@+id/chipAll"
+            app:singleLine="true">
 
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌍 All"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:rippleColor="@color/accent_blue"
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMainPark"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌲 Parks"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:rippleColor="@color/accent_blue"
+                app:chipStrokeColor="@color/card_dark"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMainCity"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏙️ Cities"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:rippleColor="@color/accent_blue"
+                app:chipStrokeColor="@color/card_dark"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMainHistorical"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏛️ Historical"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:rippleColor="@color/accent_blue"
+                app:chipStrokeColor="@color/card_dark"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMainRestaurant"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍔 Food"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/card_dark"
+                app:rippleColor="@color/accent_blue"
+                app:chipStrokeColor="@color/card_dark"
+                app:chipStrokeWidth="1dp"/>
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
     <ListView
         android:id="@+id/mainListView"
         android:layout_width="match_parent"
