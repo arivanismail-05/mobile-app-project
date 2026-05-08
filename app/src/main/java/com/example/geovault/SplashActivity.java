@@ -1,6 +1,7 @@
 package com.example.geovault;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,6 +18,12 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         btnGetStarted = findViewById(R.id.btnGetStarted);
+
+        SharedPreferences mypref = getSharedPreferences("mypref", MODE_PRIVATE);
+        if(mypref.getBoolean("islogin", false)) {
+            redirectFinish(MainActivity.class);
+            return;
+        }
 
 
         btnGetStarted.setOnClickListener(new View.OnClickListener() {

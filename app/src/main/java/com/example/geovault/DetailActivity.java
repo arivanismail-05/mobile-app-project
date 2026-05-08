@@ -1,5 +1,6 @@
 package com.example.geovault;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,18 +15,18 @@ import com.bumptech.glide.Glide;
 import com.example.geovault.Base.BaseActivity;
 import com.google.android.material.appbar.MaterialToolbar;
 
-public class MapActivity extends BaseActivity {
+public class DetailActivity extends BaseActivity {
     MaterialToolbar toolbar;
+    ImageView imgStaticMap;
 
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_detail);
 
 
         toolbar = findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -35,9 +36,10 @@ public class MapActivity extends BaseActivity {
             }
         });
 
-        ImageView imageView = (ImageView) findViewById(R.id.mapview);
 
-        Glide.with(this).load("https://i.pinimg.com/736x/0f/29/d5/0f29d571805aaba3761fdfa5059866a7.jpg").into(imageView);
+        imgStaticMap  =  findViewById(R.id.imgStaticMap);
+
+        Glide.with(this).load("https://lh3.googleusercontent.com/VKEIvvokZHFk7Sw1pNk9VChgkXzN_Jz8oYr5JHIK4qeHZtCDwDUuy_qh6O4S3Qb2oyGe6kBSvmOw5xlDguenjeENosM8TTfDUsZvIeY=w609").into(imgStaticMap);
 
     }
 }
