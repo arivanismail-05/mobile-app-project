@@ -10,6 +10,7 @@ import com.google.android.material.button.MaterialButton;
 public class MainActivity extends BaseActivity {
 
     MaterialButton btnAdd;
+    MaterialButton btnMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +18,21 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         btnAdd = findViewById(R.id.btnAdd);
+        btnMap  = findViewById(R.id.btnMap);
 
 
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectFinish(AddActivity.class);
+                redirect(AddActivity.class);
+            }
+        });
+
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirect(MapActivity.class);
             }
         });
 
