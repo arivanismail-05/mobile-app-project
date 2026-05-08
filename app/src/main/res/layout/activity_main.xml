@@ -7,17 +7,147 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity"
-    android:background="@color/bg_dark">
+    android:background="@color/bg_dark"
+    tools:context=".MainActivity">
+
     <com.google.android.material.appbar.MaterialToolbar
-        app:navigationIcon="@drawable/marker_24"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@string/app_name"
-        android:fitsSystemWindows="true"
         app:titleTextColor="#fff"
-        app:titleCentered="false"
-        android:background="@color/main_blue">
-    </com.google.android.material.appbar.MaterialToolbar>
+        android:background="@color/main_blue"
+        app:navigationIcon="@drawable/marker_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="3">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMap"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Map"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            app:icon="@drawable/map_marker_24"
+            app:iconTint="@color/accent_blue"
+            android:backgroundTint="@color/card_dark"
+            android:layout_margin="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdd"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+
+            android:text="Add"
+            android:textColor="@color/white"
+            app:icon="@drawable/add_24"
+            app:iconTint="@color/accent_blue"
+            android:backgroundTint="@color/card_dark"
+            android:layout_margin="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVisited"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+
+            android:text="Visited"
+            android:textColor="@color/white"
+            app:icon="@drawable/visit_24"
+            app:iconTint="@color/accent_blue"
+            android:backgroundTint="@color/card_dark"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="Search destinations..."
+        android:textColorHint="@color/text_gray"
+        app:hintTextColor="@color/accent_blue"
+        app:boxBackgroundColor="@color/card_dark"
+        app:boxStrokeColor="@color/accent_blue"
+        app:startIconDrawable="@android:drawable/ic_menu_search"
+        app:startIconTint="@color/text_gray">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:layout_marginEnd="8dp"
+                app:cornerRadius="20dp"
+                android:textColor="@color/white"
+                app:strokeColor="@color/accent_blue"/>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parks"
+                android:layout_marginEnd="8dp"
+                app:cornerRadius="20dp"
+                android:textColor="@color/text_gray"
+                app:strokeColor="@color/card_dark"/>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cities"
+                android:layout_marginEnd="8dp"
+                app:cornerRadius="20dp"
+                android:textColor="@color/text_gray"
+                app:strokeColor="@color/card_dark"/>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historical"
+                android:layout_marginEnd="8dp"
+                app:cornerRadius="20dp"
+                android:textColor="@color/text_gray"
+                app:strokeColor="@color/card_dark"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ListView
+        android:id="@+id/mainListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="12dp"
+        android:clipToPadding="false"/>
 
 </LinearLayout>

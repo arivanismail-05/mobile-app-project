@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/bg_dark"
+    tools:context=".AddActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Add New Memory"
+        app:titleTextColor="@color/white"
+        app:titleCentered="true"
+        android:background="@color/main_blue"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title (e.g. Family Trip)"
+                android:textColorHint="@color/text_gray"
+                app:hintTextColor="@color/accent_blue"
+                app:boxBackgroundColor="@color/card_dark"
+                app:boxStrokeColor="@color/accent_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textCapSentences"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Where to go? (Location Name)"
+                android:textColorHint="@color/text_gray"
+                app:hintTextColor="@color/accent_blue"
+                app:boxBackgroundColor="@color/card_dark"
+                app:boxStrokeColor="@color/accent_blue"
+                app:startIconDrawable="@drawable/marker_24"
+                app:startIconTint="@color/accent_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textCapWords"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Category"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/categoryChipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true"
+                    android:paddingBottom="8dp"
+                    app:singleLine="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPark"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌲 Park"
+                        android:textColor="@color/white"
+                        app:chipBackgroundColor="@color/card_dark"
+                        app:rippleColor="@color/accent_blue"
+                        app:chipStrokeColor="@color/accent_blue"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipRestaurant"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍔 Restaurant"
+                        android:textColor="@color/white"
+                        app:chipBackgroundColor="@color/card_dark"
+                        app:rippleColor="@color/accent_blue"
+                        app:chipStrokeColor="@color/accent_blue"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipHistorical"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏛️ Historical"
+                        android:textColor="@color/white"
+                        app:chipBackgroundColor="@color/card_dark"
+                        app:rippleColor="@color/accent_blue"
+                        app:chipStrokeColor="@color/accent_blue"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipCity"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏙️ City"
+                        android:textColor="@color/white"
+                        app:chipBackgroundColor="@color/card_dark"
+                        app:rippleColor="@color/accent_blue"
+                        app:chipStrokeColor="@color/accent_blue"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipCafe"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☕ Cafe"
+                        android:textColor="@color/white"
+                        app:chipBackgroundColor="@color/card_dark"
+                        app:rippleColor="@color/accent_blue"
+                        app:chipStrokeColor="@color/accent_blue"/>
+
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Write your notes here..."
+                android:textColorHint="@color/text_gray"
+                app:hintTextColor="@color/accent_blue"
+                app:boxBackgroundColor="@color/card_dark"
+                app:boxStrokeColor="@color/accent_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="top"
+                    android:minLines="4"
+                    android:inputType="textMultiLine"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="32dp"
+                android:text="Save to Memories"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                app:cornerRadius="12dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/accent_blue"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
