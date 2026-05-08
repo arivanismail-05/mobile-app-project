@@ -27,7 +27,6 @@ public class HomeFragment extends Fragment {
         lvHomePlaces.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // دۆزینەوەی ئیندێکسی ڕاستەقینە لە ناو placesList
                 PlaceModel selectedPlace = homeList.get(position);
                 int realIndex = BaseActivity.placesList.indexOf(selectedPlace);
 

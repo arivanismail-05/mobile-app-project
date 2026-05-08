@@ -28,7 +28,6 @@ public class WorkFragment extends Fragment {
         lvWorkPlaces.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // دۆزینەوەی ئیندێکسی ڕاستەقینە
                 PlaceModel selectedPlace = workList.get(position);
                 int realIndex = BaseActivity.placesList.indexOf(selectedPlace);
 
