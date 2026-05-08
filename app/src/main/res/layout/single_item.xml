@@ -36,7 +36,7 @@
                 android:layout_height="match_parent"
                 android:padding="12dp"
                 android:src="@drawable/marker_24"
-                app:tint="@color/accent_blue" />
+                 />
         </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
@@ -78,8 +78,8 @@
 
         <ImageView
             android:id="@+id/btnDetails"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/angle_circle_right_24"

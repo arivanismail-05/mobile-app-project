@@ -118,7 +118,6 @@
                 android:text="🌍 All"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:rippleColor="@color/accent_blue"
                 app:chipStrokeColor="@color/accent_blue"
                 app:chipStrokeWidth="1dp"/>
 
@@ -130,7 +129,8 @@
                 android:text="🏠 Home"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipWork"
@@ -140,7 +140,8 @@
                 android:text="💼 Work"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipRestaurant"
@@ -150,7 +151,8 @@
                 android:text="🍴 Restaurant"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipShopping"
@@ -160,7 +162,8 @@
                 android:text="🛍️ Shopping"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTravel"
@@ -170,8 +173,8 @@
                 android:text="✈️ Travel"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
-
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipHospital"
@@ -181,9 +184,8 @@
                 android:text="🏥 Hospital"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
-
-
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipEntertainment"
@@ -193,9 +195,8 @@
                 android:text="🎬 Fun"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
-
-
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipOther"
@@ -205,18 +206,14 @@
                 android:text="📍 Other"
                 android:textColor="@color/white"
                 app:chipBackgroundColor="@color/card_dark"
-                app:chipStrokeColor="@color/card_dark"/>
+                app:chipStrokeColor="@color/accent_blue"
+                app:chipStrokeWidth="1dp"/>
 
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
-    <ListView
-        android:id="@+id/mainListView"
+    <FrameLayout
+        android:id="@+id/main_fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="8dp"
-        android:padding="12dp"
-        android:clipToPadding="false"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

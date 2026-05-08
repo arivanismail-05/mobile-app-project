@@ -70,26 +70,40 @@
                         android:textColor="@color/white"
                         android:textSize="24sp"
                         android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imgCategory"
+                            android:layout_marginEnd="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/marker_24"
+                            />
 
                     <TextView
                         android:id="@+id/tvDetailCategory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="🌲 Nature &amp; Park"
+                        android:text="Park"
                         android:textColor="@color/accent_blue"
                         android:textSize="16sp" />
+                    </LinearLayout>
                 </LinearLayout>
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/fabFavorite"
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchVisited"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:fabSize="mini"
-                    android:src="@android:drawable/btn_star_big_off"
-                    app:backgroundTint="@color/card_dark"
-                    app:tint="@color/text_gray"
-                    app:elevation="0dp"/>
+                    android:text="Visited"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp"
+                    app:thumbTint="@color/accent_blue"
+                    app:trackTint="@color/card_dark" />
             </LinearLayout>
 
             <View

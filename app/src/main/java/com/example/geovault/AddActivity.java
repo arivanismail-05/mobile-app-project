@@ -41,15 +41,12 @@ public class AddActivity extends BaseActivity {
             }
         });
 
-        // لۆجیکی گۆڕینی ڕەنگی کاتێگۆرییەکان کاتێک کلیکیان لێ دەکرێت
         categoryChipGroup.setOnCheckedStateChangeListener((group, checkedIds) -> {
             for (int i = 0; i < group.getChildCount(); i++) {
                 Chip chip = (Chip) group.getChildAt(i);
                 if (chip.isChecked()) {
-                    // ئەگەر هەڵبژێردرا بوو، باکگراوندەکەی بکە بە شین
                     chip.setChipBackgroundColor(ColorStateList.valueOf(getResources().getColor(R.color.main_blue)));
                 } else {
-                    // ئەگەر هەڵبژێردراو نەبوو، باکگراوندەکەی بکە بە ڕەنگی کارتە تاریکەکە
                     chip.setChipBackgroundColor(ColorStateList.valueOf(getResources().getColor(R.color.card_dark)));
                 }
             }
@@ -67,17 +64,19 @@ public class AddActivity extends BaseActivity {
 
                 if (checkedChipId != View.NO_ID) {
                     Chip chip = findViewById(checkedChipId);
-                    category = chip.getText().toString();
+                    String fullText = chip.getText().toString();
+
+                    category = fullText.replaceAll("[^a-zA-Z]", "").trim();
                 }
 
                 if (!title.isEmpty() && !location.isEmpty() && !category.isEmpty()) {
                     PlaceModel newPlace = new PlaceModel(title, location, category, note, false);
                     placesList.add(newPlace);
 
-                    Toast.makeText(AddActivity.this, "Added to " + category, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddActivity.this, "Added: " + category, Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
-                    Toast.makeText(AddActivity.this, "Please fill Title, Location and select a Category", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddActivity.this, "Please fill all fields and select a category", Toast.LENGTH_SHORT).show();
                 }
             }
         });
