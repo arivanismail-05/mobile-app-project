@@ -19,17 +19,11 @@ public class SplashActivity extends BaseActivity {
         setContentView(R.layout.activity_splash);
         btnGetStarted = findViewById(R.id.btnGetStarted);
 
-        SharedPreferences mypref = getSharedPreferences("mypref", MODE_PRIVATE);
-        if(mypref.getBoolean("islogin", false)) {
-            redirectFinish(MainActivity.class);
-            return;
-        }
-
 
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectFinish(LoginActivity.class);
+                redirectFinish(MainActivity.class);
             }
         });
 

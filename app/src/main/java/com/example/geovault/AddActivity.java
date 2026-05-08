@@ -41,6 +41,13 @@ public class AddActivity extends BaseActivity {
             }
         });
 
+        if (getIntent().hasExtra("selected_location")) {
+            String location = getIntent().getStringExtra("selected_location");
+            etLocation.setText(location);
+            etLocation.setEnabled(false);
+            etLocation.setFocusable(false);
+        }
+
         categoryChipGroup.setOnCheckedStateChangeListener((group, checkedIds) -> {
             for (int i = 0; i < group.getChildCount(); i++) {
                 Chip chip = (Chip) group.getChildAt(i);
@@ -65,14 +72,12 @@ public class AddActivity extends BaseActivity {
                 if (checkedChipId != View.NO_ID) {
                     Chip chip = findViewById(checkedChipId);
                     String fullText = chip.getText().toString();
-
                     category = fullText.replaceAll("[^a-zA-Z]", "").trim();
                 }
 
                 if (!title.isEmpty() && !location.isEmpty() && !category.isEmpty()) {
                     PlaceModel newPlace = new PlaceModel(title, location, category, note, false);
                     placesList.add(newPlace);
-
                     Toast.makeText(AddActivity.this, "Added: " + category, Toast.LENGTH_SHORT).show();
                     finish();
                 } else {

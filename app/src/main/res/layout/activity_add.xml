@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:hint="Where to go? (Location Name)"
+                android:hint="Location Coordinates"
                 android:textColorHint="@color/text_gray"
                 app:hintTextColor="@color/accent_blue"
                 app:boxBackgroundColor="@color/card_dark"
@@ -62,10 +62,12 @@
                     android:id="@+id/etLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:inputType="textCapWords"/>
+                    android:textColor="@color/text_gray"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:inputType="none"/>
             </com.google.android.material.textfield.TextInputLayout>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

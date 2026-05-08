@@ -24,36 +24,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:weightSum="3">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnMap"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Map"
-            android:textSize="12sp"
-            android:textColor="@color/white"
-            app:icon="@drawable/map_marker_24"
-            app:iconTint="@color/accent_blue"
-            android:backgroundTint="@color/card_dark"
-            android:layout_margin="4dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAdd"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="12sp"
-
-            android:text="Add"
-            android:textColor="@color/white"
-            app:icon="@drawable/add_24"
-            app:iconTint="@color/accent_blue"
-            android:backgroundTint="@color/card_dark"
-            android:layout_margin="4dp"/>
+        android:weightSum="2"> <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdd"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:text="Add New"
+        android:textColor="@color/white"
+        app:icon="@drawable/add_24"
+        app:iconTint="@color/accent_blue"
+        android:backgroundTint="@color/card_dark"
+        android:layout_margin="4dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVisited"
@@ -62,7 +45,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="12sp"
-
             android:text="Visited"
             android:textColor="@color/white"
             app:icon="@drawable/visit_24"
@@ -70,7 +52,6 @@
             android:backgroundTint="@color/card_dark"
             android:layout_margin="4dp"/>
     </LinearLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

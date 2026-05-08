@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
-    MaterialButton btnAdd, btnMap, btnVisited;
+    MaterialButton btnAdd, btnVisited;
     ChipGroup mainCategoryChipGroup;
     TextInputEditText searchEditText;
 
@@ -28,7 +28,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         btnAdd = findViewById(R.id.btnAdd);
-        btnMap = findViewById(R.id.btnMap);
         btnVisited = findViewById(R.id.btnVisited);
         mainCategoryChipGroup = findViewById(R.id.mainCategoryChipGroup);
         searchEditText = findViewById(R.id.searchEditText);
@@ -65,16 +64,10 @@ public class MainActivity extends BaseActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirect(AddActivity.class);
-            }
-        });
-
-        btnMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 redirect(MapActivity.class);
             }
         });
+
 
         btnVisited.setOnClickListener(new View.OnClickListener() {
             @Override
