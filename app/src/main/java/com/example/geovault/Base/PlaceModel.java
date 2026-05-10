@@ -23,7 +23,7 @@ public class PlaceModel {
         if (category.contains("Travel")) return "https://images.icon-icons.com/1363/PNG/512/travel-holiday-vacation-328_89069.png";
         if (category.contains("Hospital")) return "https://images.icon-icons.com/2227/PNG/512/hospital_health_clinic_urban_buildings_medical_icon_134527.png";
         if (category.contains("Fun")) return "https://images.icon-icons.com/810/PNG/512/clapperboard_cinema_icon-icons.com_66131.png";
-        return "https://images.icon-icons.com/201/PNG/512/map-marker_24017.png";
+        return "https://images.icon-icons.com/810/PNG/512/clapperboard_cinema_icon-icons.com_66131.png";
     }
 
     public String getTitle() { return title; }

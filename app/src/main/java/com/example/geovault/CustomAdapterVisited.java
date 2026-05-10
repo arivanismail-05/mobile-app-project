@@ -15,50 +15,47 @@ import java.util.ArrayList;
 
 public class CustomAdapterVisited extends BaseAdapter {
 
-    private ArrayList<PlaceModel> list;
+    private ArrayList<PlaceModel> places;
     private Activity context;
 
-    // کۆنستراکتەر بۆ وەرگرتنی لیستەکە و کۆنتێکست
-    public CustomAdapterVisited(ArrayList<PlaceModel> list, Activity context) {
-        this.list = list;
+    public CustomAdapterVisited(ArrayList<PlaceModel> places, Activity context) {
+        this.places = places;
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return list.size();
+        return places.size();
     }
 
     @Override
-    public Object getItem(int position) {
-        return list.get(position);
+    public Object getItem(int i) {
+        return places.get(i);
     }
 
     @Override
-    public long getItemId(int position) {
-        return position;
+    public long getItemId(int i) {
+        return i;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        // ئەگەر ڤیوەکە دروست نەکرابوو، دروستی بکە لە ڕێگەی LayoutInflater
+    public View getView(int i, View convertView, ViewGroup parent) {
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.single_visited, parent, false);
         }
 
-        // دۆزینەوەی ئایتمەکە بەپێی پۆزیشن
-        PlaceModel place = list.get(position);
+        PlaceModel place = places.get(i);
 
-        // دۆزینەوەی تێکست ڤیو و ئیمەیج ڤیووەکان لە ناو single_visited.xml
         TextView tvTitle = convertView.findViewById(R.id.tvTitle);
         TextView tvCategory = convertView.findViewById(R.id.tvCategory);
         ImageView imgCategory = convertView.findViewById(R.id.imgCategory);
+        TextView tvTime = convertView.findViewById(R.id.tvTime);
 
-        // دانانی داتاکان
         tvTitle.setText(place.getTitle());
         tvCategory.setText(place.getCategory());
+        tvTime.setText(place.getLocation());
 
-        // بەکارهێنانی Glide بۆ نیشاندانی وێنەی کاتێگۆری
+
         Glide.with(context)
                 .load(place.getImageUrl())
                 .placeholder(R.drawable.marker_24)

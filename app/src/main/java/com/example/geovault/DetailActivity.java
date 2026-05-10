@@ -17,7 +17,6 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 
 public class DetailActivity extends BaseActivity {
 
-    // ناساندنی گۆڕاوەکان
     MaterialToolbar toolbar;
     ImageView imgStaticMap, imgCategory;
     TextView tvDetailTitle, tvDetailCategory, tvDetailLocationName, tvDetailNotes;
@@ -25,7 +24,6 @@ public class DetailActivity extends BaseActivity {
     MaterialButton btnDeletePlace;
     int index;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,6 +1,7 @@
 package com.example.geovault;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -23,7 +24,9 @@ public class MapActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
+        SharedPreferences myPrefs = getSharedPreferences("MyMapPrefs", MODE_PRIVATE);
+
+        Configuration.getInstance().load(this, myPrefs);
 
         setContentView(R.layout.activity_map);
 

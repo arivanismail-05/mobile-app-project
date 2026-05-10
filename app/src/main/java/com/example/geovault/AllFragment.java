@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.example.geovault.Base.BaseActivity;
+import com.example.geovault.Base.PlaceModel;
+
+import java.util.ArrayList;
 
 public class AllFragment extends Fragment {
 
@@ -48,7 +51,7 @@ public class AllFragment extends Fragment {
         }
     }
 
-    public void updateAdapter(java.util.ArrayList<com.example.geovault.Base.PlaceModel> newList) {
+    public void updateAdapter(ArrayList<PlaceModel> newList) {
         if (lvAllPlaces != null) {
             CustomAdapter adapter = new CustomAdapter(newList, getActivity());
             lvAllPlaces.setAdapter(adapter);

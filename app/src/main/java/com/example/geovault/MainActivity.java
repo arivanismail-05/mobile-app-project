@@ -76,9 +76,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        if (savedInstanceState == null) {
-            replaceFragment(new AllFragment());
-        }
+
     }
 
     private void filter(String text) {

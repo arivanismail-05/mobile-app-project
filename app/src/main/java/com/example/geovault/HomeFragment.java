@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment {
         lvHomePlaces.setAdapter(adapter);
     }
 
-    public void updateAdapter(java.util.ArrayList<com.example.geovault.Base.PlaceModel> newList) {
+    public void updateAdapter(ArrayList<PlaceModel> newList) {
         if (lvHomePlaces != null) {
             CustomAdapter adapter = new CustomAdapter(newList, getActivity());
             lvHomePlaces.setAdapter(adapter);

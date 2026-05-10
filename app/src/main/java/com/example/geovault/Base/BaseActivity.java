@@ -16,13 +16,10 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         setupStatusBar();
     }
     private void setupStatusBar() {
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.main_blue));
-
         getWindow().getDecorView().setSystemUiVisibility(0);
     }
 

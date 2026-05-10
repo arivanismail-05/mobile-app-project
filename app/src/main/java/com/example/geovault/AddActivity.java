@@ -69,7 +69,7 @@ public class AddActivity extends BaseActivity {
                 int checkedChipId = categoryChipGroup.getCheckedChipId();
                 String category = "";
 
-                if (checkedChipId != View.NO_ID) {
+                if (checkedChipId != -1) {
                     Chip chip = findViewById(checkedChipId);
                     String fullText = chip.getText().toString();
                     category = fullText.replaceAll("[^a-zA-Z]", "").trim();
